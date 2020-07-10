@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
 	try {
 		let todos = await knex("todo");
 		res.json({
-			data: todos,
+			todos: todos,
 			message: "mendapatkan seluruh todo",
 		});
 	} catch (e) {
@@ -18,6 +18,7 @@ router.get("/", async (req, res) => {
 // save new todo
 router.post("/", async (req, res) => {
 	try {
+		console.log(req.body);
 		let title = req.body.title;
 		let note = req.body.note;
 		let deadline = new Date(req.body.deadline);
@@ -29,12 +30,10 @@ router.post("/", async (req, res) => {
 		});
 
 		res.json({
-			data: {
-				id: id,
-				title: title,
-				note: note,
-				deadline: deadline,
-			},
+			id: id[0],
+			title: title,
+			note: note,
+			deadline: deadline,
 			message: "berhasil menyimpan todo",
 		});
 	} catch (e) {
@@ -49,9 +48,7 @@ router.delete("/", async (req, res) => {
 
 		await knex("todo").where("id", id).del();
 		res.json({
-			data: {
-				id: id,
-			},
+			id: id,
 			message: "todo telah dihapus",
 		});
 	} catch (e) {
