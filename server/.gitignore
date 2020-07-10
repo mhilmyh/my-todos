@@ -1,0 +1,12 @@
+# package
+node_modules
+
+# environment file
+.env
+
+# migration folder
+src/migrations/*.js
+!src/migrations/.gitkeep
+
+# logger file
+src/access.log

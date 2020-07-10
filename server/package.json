@@ -1,0 +1,34 @@
+{
+	"name": "my-todo-server",
+	"version": "1.0.0",
+	"description": "express",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon index.js",
+		"migrate": "knex --knexfile=./src/config/knexfile.js migrate:latest",
+		"rollback": "knex --knexfile=./src/config/knexfile.js migrate:rollback"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mhilmyh/my-todos.git"
+	},
+	"keywords": [
+		"api"
+	],
+	"author": "m hilmy h",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/mhilmyh/my-todos/issues"
+	},
+	"homepage": "https://github.com/mhilmyh/my-todos#readme",
+	"dependencies": {
+		"express": "^4.17.1",
+		"knex": "^0.21.2",
+		"morgan": "^1.10.0",
+		"mysql": "^2.18.1"
+	},
+	"devDependencies": {
+		"dotenv": "^8.2.0",
+		"nodemon": "^2.0.4"
+	}
+}
