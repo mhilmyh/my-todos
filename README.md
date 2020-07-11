@@ -89,7 +89,7 @@ Buat instance pada AWS RDS, dan sertakan nama database, dan pilih mysql sebagai 
 
 - Karena menggunakan free tier, database tidak langsung terbuat sehingga harus dibuat terlebih dahulu.
 
-![Inbound rule] (https://raw.githubusercontent.com/mhilmyh/my-todos/master/screenshots/ss-db-acc.PNG)
+![Inbound rule](https://raw.githubusercontent.com/mhilmyh/my-todos/master/screenshots/ss-db-acc.PNG)
 
 - Pastikan security inbound pada rds sudah mengijinkan koneksi dari server backend (hanya server backend yg digunakan karena yg berhubungan dengan db hanya backend)
 - selanjutnya dari ec2, lakukan koneksi ke rds
@@ -98,7 +98,6 @@ Buat instance pada AWS RDS, dan sertakan nama database, dan pilih mysql sebagai 
 
 - buat database (sesuaikan dengan config .env file)
 - lakukan migrasi (dari backend dengan knex migrate)
-
 
 ### Testing
 
@@ -112,5 +111,5 @@ Jalankan semua servis ec2 dengan package `pm2`
 ### Link
 
 - Repository Github : [https://github.com/mhilmyh/my-todos](https://github.com/mhilmyh/my-todos)
-- Alamat Frontend : 13.250.63.243:3000
-- Alamat Backend : 54.169.149.237:8000
+- Alamat Frontend : http://13.250.63.243:3000
+- Alamat Backend : http://54.169.149.237:8000
