@@ -1,5 +1,7 @@
 # MY-TODOS
 
+Tugas Seleksi Garuda Cloud Community
+
 ## Pengenalan
 
 Web aplikasi ini berguna untuk menyimpan catatan agar jadwal-mu lebih terorganisir.
@@ -49,13 +51,22 @@ Tidak banyak yang dikerjakaan karena menggunakan settingan bawaan dari `tailwind
 
 ### Proses Setup Server AWS Frontend (pada EC2)
 
+![Instance AWS](https://raw.githubusercontent.com/mhilmyh/my-todos/master/screenshots/ss-aws-ec2.PNG)
+
 Pertama-tama, aktifkan/buat instance terlebih dahulu. Setelah mengaktifkan instance (buat di halaman aws console) langkah selanjutnya adalah :
 
 - konek ke instance aws yang akan digunakan menggunakan ssh
 - update dan upgrade repository jika diperlukan lalu menginstall node dan npm
 - clone repository [https://github.com/mhilmyh/my-todos](https://github.com/mhilmyh/my-todos)
-- lakukan build pada folder `client/` untuk build file nextJS, setelah itu jalankan dengan command `npm run start` sehingga frontend sudah berjalan pada port 3000 (default)
+
+- lakukan build pada folder `client/` untuk build file nextJS dengan `npm run build` , setelah itu jalankan dengan command `npm run start` sehingga frontend sudah berjalan pada port 3000 (default)
+
+![Gambar Detail EC2](https://github.com/mhilmyh/my-todos/blob/master/screenshots/ss-aws-detail.PNG)
+
 - kembali ke aws console, pada bagian security group, tambahkan inbound rules untuk custom tcp dengan port 3000
+
+![Setelah di set inbound rule nya](https://raw.githubusercontent.com/mhilmyh/my-todos/master/screenshots/ss-ir.PNG)
+
 - akses ke ip instance dengan port 3000 untuk uji coba
 - setelah berhasil, jangan lupa ganti base url di environtment file ke arah backend (setelah backend selesai)
 
@@ -74,11 +85,25 @@ Mirip seperti yang sebelumnya
 
 Buat instance pada AWS RDS, dan sertakan nama database, dan pilih mysql sebagai database. Pada backend ubah environtment file config database sesuai dengan yang ada di RDS. Lalu dilanjutkan dengan langkah berikut :
 
+![Membuat RDS](https://raw.githubusercontent.com/mhilmyh/my-todos/master/screenshots/ss-db.PNG)
+
 - Karena menggunakan free tier, database tidak langsung terbuat sehingga harus dibuat terlebih dahulu.
+
+![Inbound rule] (https://raw.githubusercontent.com/mhilmyh/my-todos/master/screenshots/ss-db-acc.PNG)
+
 - Pastikan security inbound pada rds sudah mengijinkan koneksi dari server backend (hanya server backend yg digunakan karena yg berhubungan dengan db hanya backend)
 - selanjutnya dari ec2, lakukan koneksi ke rds
+
+![Membuat DB](https://raw.githubusercontent.com/mhilmyh/my-todos/master/screenshots/ss-create-db.PNG)
+
 - buat database (sesuaikan dengan config .env file)
 - lakukan migrasi (dari backend dengan knex migrate)
+
+
+### Testing
+
+Menguji koneksi database dan backend
+![Gambar Postman](https://raw.githubusercontent.com/mhilmyh/my-todos/master/screenshots/ss-postman.PNG)
 
 ### Finalisasi
 
