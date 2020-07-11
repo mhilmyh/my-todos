@@ -3,11 +3,11 @@
 Tugas Seleksi Garuda Cloud Community untuk Divisi Commander
 
 # Table of Content
-- [Langkah Pengerjaan] (#langkah-pengerjaan)
-- [Testing (postman)] (#testing)
-- [Note] (#note)
-- [Preview API DOC] (#preview-api-doc)
-- [Link Utama] (#link)
+- [Langkah Pengerjaan](#langkah-pengerjaan)
+- [Testing (postman)](#testing)
+- [Note](#note)
+- [Preview API DOC](#preview-api-doc)
+- [Link Utama](#link)
 
 # Pengenalan
 
