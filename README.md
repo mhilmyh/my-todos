@@ -71,3 +71,13 @@ Mirip seperti yang sebelumnya
 - test dengan postman, jalankan kembali tetapi dengam `pm2`
 
 ### Proses Setup Database dengan RDS
+
+Buat instance pada AWS RDS, dan sertakan nama database, dan pilih mysql sebagai database. Pada backend ubah environtment file config database sesuai dengan yang ada di RDS dan setup selesai.
+
+### Testing
+
+### Link
+
+- Repository Github : [https://github.com/mhilmyh/my-todos](https://github.com/mhilmyh/my-todos)
+- Alamat Frontend : 13.250.63.243:3000
+- Alamat Backend : 54.169.149.237:8000
