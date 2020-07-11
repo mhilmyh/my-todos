@@ -1,6 +1,13 @@
 # MY-TODOS
 
-Tugas Seleksi Garuda Cloud Community
+Tugas Seleksi Garuda Cloud Community untuk Divisi Commander
+
+# Table of Content
+- [Langkah Pengerjaan] (##langkah-pengerjaan)
+- [Testing (postman)] (##testing)
+- [Note] (##note)
+- [Preview API DOC] (##preview-api-doc)
+- [Link Utama] (##link)
 
 ## Pengenalan
 
@@ -99,27 +106,29 @@ Buat instance pada AWS RDS, dan sertakan nama database, dan pilih mysql sebagai 
 - buat database (sesuaikan dengan config .env file)
 - lakukan migrasi (dari backend dengan knex migrate)
 
-### Testing
+## Testing
 
 Menguji koneksi database dan backend
 ![Gambar Postman](https://raw.githubusercontent.com/mhilmyh/my-todos/master/screenshots/ss-postman.PNG)
 
-### Finalisasi
+## Finalisasi
 
 Jalankan semua servis ec2 dengan package `pm2`
 
 ![Contoh pm2](https://raw.githubusercontent.com/mhilmyh/my-todos/master/screenshots/ss-pm2-backend.PNG)
 
-### Note
+## Note
 
 - Karena sulitnya mendeploy nextJs dengan pm2, akhirnya saya menggunakan apache pada frontend. Linknya dapat dilihat di bawah ini.
 - Untuk dokumentasi REST API yang digunakan, bisa di cek di backend pada path `/doc`
 
-### Preview API DOC
+## Preview API DOC
 
 ![Preview API DOC](https://raw.githubusercontent.com/mhilmyh/my-todos/master/screenshots/ss-api-doc.png)
 
-### Link
+## Link
+
+Berikut adalah link-link utama projek :
 
 - Repository Github : [https://github.com/mhilmyh/my-todos](https://github.com/mhilmyh/my-todos)
 - Alamat Frontend : [http://13.250.63.243](http://13.250.63.243)
