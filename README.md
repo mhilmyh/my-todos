@@ -117,7 +117,7 @@ Jalankan semua servis ec2 dengan package `pm2`
 
 ### Preview API DOC
 
-![Preview API DOC](https://raw.githubusercontent.com/mhilmyh/my-todos/master/screenshots/ss-api-doc.PNG)
+![Preview API DOC](https://raw.githubusercontent.com/mhilmyh/my-todos/master/screenshots/ss-api-doc.png)
 
 ### Link
 
