@@ -5,6 +5,9 @@ const morgan = require("morgan");
 const path = require("path");
 const cors = require("cors");
 
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("../openapi.json");
+
 module.exports = (app) => {
 	// utility
 	app.use(express.urlencoded({ extended: true }));
@@ -22,4 +25,7 @@ module.exports = (app) => {
 
 	// routes
 	app.use("/api", routes);
+
+	// api doc
+	app.use("/doc", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 };
