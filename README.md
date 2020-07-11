@@ -110,6 +110,10 @@ Jalankan semua servis ec2 dengan package `pm2`
 
 ![Contoh pm2](https://raw.githubusercontent.com/mhilmyh/my-todos/master/screenshots/ss-pm2-backend.PNG)
 
+### Note
+
+Karena sulitnya mendeploy nextJs dengan pm2, akhirnya saya menggunakan apache pada frontend. Linknya dapat dilihat di bawah ini.
+
 ### Link
 
 - Repository Github : [https://github.com/mhilmyh/my-todos](https://github.com/mhilmyh/my-todos)
