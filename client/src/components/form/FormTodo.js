@@ -17,7 +17,7 @@ export default () => {
 			deadline: new Date(deadline),
 		};
 		axios
-			.post(process.env.BASE_URL, data, {
+			.post("http://54.169.149.237:8000/api/todo", data, {
 				headers: {
 					"Content-Type": "application/json",
 				},

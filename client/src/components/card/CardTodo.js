@@ -9,7 +9,7 @@ export default (props) => {
 
 	const handlerClick = () => {
 		axios
-			.delete("http://localhost:8080/api/todo", { data: { id: todo.id } })
+			.delete("http://54.169.149.237:8000/api/todo", { data: { id: todo.id } })
 			.then(({ data }) => ctx.delTodo(data.id))
 			.catch((err) => console.error(err));
 	};

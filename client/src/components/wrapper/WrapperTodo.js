@@ -2,12 +2,12 @@ import CardTodo from "../card/CardTodo";
 import { PackageContext } from "../../utils/package";
 import axios from "axios";
 
-export default (props) => {
+export default () => {
 	const ctx = React.useContext(PackageContext);
 
 	React.useEffect(() => {
 		console.log("Effect WrapperTodo");
-		axios.get(process.env.BASE_URL).then(({ data }) => {
+		axios.get("http://54.169.149.237:8000/api/todo").then(({ data }) => {
 			ctx.initTodo(data.todos);
 		});
 	}, []);
