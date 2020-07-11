@@ -66,15 +66,23 @@ Mirip seperti yang sebelumnya
 - konek ke instance aws yang akan digunakan menggunakan ssh
 - update dan upgrade repository jika diperlukan lalu menginstall node dan npm
 - clone repository [https://github.com/mhilmyh/my-todos](https://github.com/mhilmyh/my-todos)
+- lakukan migrasi
 - jalankan express js dengan environtment produksi dan jangan lupa setting environtment variable nya sesuai dengan database yang digunakan
 - set inbound rule tapi kalo ini ke port 8080
-- test dengan postman, jalankan kembali tetapi dengam `pm2`
 
 ### Proses Setup Database dengan RDS
 
-Buat instance pada AWS RDS, dan sertakan nama database, dan pilih mysql sebagai database. Pada backend ubah environtment file config database sesuai dengan yang ada di RDS dan setup selesai.
+Buat instance pada AWS RDS, dan sertakan nama database, dan pilih mysql sebagai database. Pada backend ubah environtment file config database sesuai dengan yang ada di RDS. Lalu dilanjutkan dengan langkah berikut :
 
-### Testing
+- Karena menggunakan free tier, database tidak langsung terbuat sehingga harus dibuat terlebih dahulu.
+- Pastikan security inbound pada rds sudah mengijinkan koneksi dari server backend (hanya server backend yg digunakan karena yg berhubungan dengan db hanya backend)
+- selanjutnya dari ec2, lakukan koneksi ke rds
+- buat database (sesuaikan dengan config .env file)
+- lakukan migrasi (dari backend dengan knex migrate)
+
+### Finalisasi
+
+Jalankan semua servis ec2 dengan package `pm2`
 
 ### Link
 
