@@ -18,7 +18,6 @@ router.get("/", async (req, res) => {
 // save new todo
 router.post("/", async (req, res) => {
 	try {
-		console.log(req.body);
 		let title = req.body.title;
 		let note = req.body.note;
 		let deadline = new Date(req.body.deadline);

@@ -7,7 +7,7 @@ export default (props) => {
 
 	React.useEffect(() => {
 		console.log("Effect WrapperTodo");
-		axios.get("http://localhost:8080/api/todo").then(({ data }) => {
+		axios.get(process.env.BASE_URL).then(({ data }) => {
 			ctx.initTodo(data.todos);
 		});
 	}, []);
