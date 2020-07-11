@@ -1,0 +1,162 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "My Todos",
+    "description": "Dokumentasi API sederhana untuk todos app",
+    "contact": {
+      "email": "mhilmy021@gmail.com"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://13.250.63.243/",
+      "description": "Frontend Server"
+    },
+    {
+      "url": "http://54.169.149.237:8000/api/",
+      "description": "Backend Server"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Backend",
+      "description": "Endpoint yang bisa digunakan untuk operasi data"
+    }
+  ],
+  "paths": {
+    "/todo": {
+      "get": {
+        "summary": "Menampilkan catatan-catatan yang tersimpan dalam database",
+        "tags": [
+          "Backend"
+        ],
+        "responses": {
+          "200": {
+            "description": "Berhasil mendapatkan list todo",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "note": {
+                        "type": "string"
+                      },
+                      "deadline": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Menyimpan todo baru",
+        "tags": [
+          "Backend"
+        ],
+        "requestBody": {
+          "description": "data yang harus dikirim",
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "note": {
+                    "type": "string"
+                  },
+                  "deadline": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "berhasil membuat todo",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "npte": {
+                      "type": "string"
+                    },
+                    "deadline": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Menghapus todo",
+        "tags": [
+          "Backend"
+        ],
+        "requestBody": {
+          "description": "data yang harus dikirim",
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "berhasil menghapus todo",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
