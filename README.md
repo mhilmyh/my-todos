@@ -108,6 +108,8 @@ Menguji koneksi database dan backend
 
 Jalankan semua servis ec2 dengan package `pm2`
 
+![Contoh pm2](https://raw.githubusercontent.com/mhilmyh/my-todos/master/screenshots/ss-pm2-backend.PNG)
+
 ### Link
 
 - Repository Github : [https://github.com/mhilmyh/my-todos](https://github.com/mhilmyh/my-todos)
