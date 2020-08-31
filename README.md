@@ -133,6 +133,6 @@ Jalankan semua servis ec2 dengan package `pm2`
 Berikut adalah link-link utama projek :
 
 - Repository Github : [https://github.com/mhilmyh/my-todos](https://github.com/mhilmyh/my-todos)
-- Alamat Frontend : [http://13.250.63.243](http://13.250.63.243)
-- Alamat Backend : [http://54.169.149.237:8000](http://54.169.149.237:8000)
-- Dokumentasi API : [http://54.169.149.237:8000/doc](http://54.169.149.237:8000/doc)
+- Alamat Frontend(sudah di turn off) : [http://13.250.63.243](http://13.250.63.243)
+- Alamat Backend(sudah di turn off) : [http://54.169.149.237:8000](http://54.169.149.237:8000)
+- Dokumentasi API(sudah di turn off) : [http://54.169.149.237:8000/doc](http://54.169.149.237:8000/doc)
